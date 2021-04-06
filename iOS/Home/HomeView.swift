@@ -20,14 +20,13 @@ struct HomeView: View {
             // main vstack
             ScrollView(showsIndicators: false) {
                 LazyVStack {
-                   
-                    ZStack(alignment: .top) {
-                        TopMoviePreview(movie: exampleMovie1)
-                            .frame(width: screen.width)
-                            .padding(.top, -110)
-                        
-                        Text("LOGO")
-                    }
+                    
+                    TopRowButtons()
+                    
+                    TopMoviePreview(movie: exampleMovie3)
+                        .frame(width: screen.width)
+                        .padding(.top, -110)
+                        .zIndex(-1)
                     
                     ForEach(viewModel.allCategories, id: \.self) { category in
                         VStack {
@@ -59,5 +58,48 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+    }
+}
+
+struct TopRowButtons: View {
+    var body: some View {
+        HStack {
+            Button(action: {
+                //
+            }, label: {
+                Image("Logo")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 50)
+            }).buttonStyle(PlainButtonStyle())
+            
+            
+            Spacer()
+            
+            Button(action: {
+                //
+            }, label: {
+                Text("TV Shows")
+            }).buttonStyle(PlainButtonStyle())
+            
+            Spacer()
+            
+            Button(action: {
+                //
+            }, label: {
+                Text("Movies")
+            }).buttonStyle(PlainButtonStyle())
+            
+            Spacer()
+            
+            Button(action: {
+                //
+            }, label: {
+                Text("My List")
+            }).buttonStyle(PlainButtonStyle())
+            
+        }
+        .padding(.leading, 10)
+        .padding(.trailing, 30)
     }
 }

@@ -17,6 +17,7 @@
 		A89DF3A426168C560014B5E1 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89DF3A326168C560014B5E1 /* GlobalHelpers.swift */; };
 		A8A5E24626196E6C004A0220 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5E24526196E6C004A0220 /* SmallVerticalButton.swift */; };
 		A8A5E249261A19A7004A0220 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5E248261A19A7004A0220 /* WhiteButton.swift */; };
+		A8A5E5E2261CD2D8004A0220 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5E5E1261CD2D8004A0220 /* MovieDetail.swift */; };
 		A8B07DDA2617BC9300FA1B8E /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A8B07DD92617BC9300FA1B8E /* KingfisherSwiftUI */; };
 		A8B07DDD26191BAE00FA1B8E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B07DDC26191BAE00FA1B8E /* HomeViewModel.swift */; };
 		A8B07DE1261955F400FA1B8E /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B07DE0261955F400FA1B8E /* TopMoviePreview.swift */; };
@@ -35,6 +36,7 @@
 		A89DF3A326168C560014B5E1 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		A8A5E24526196E6C004A0220 /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		A8A5E248261A19A7004A0220 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
+		A8A5E5E1261CD2D8004A0220 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		A8B07DDC26191BAE00FA1B8E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A8B07DE0261955F400FA1B8E /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				A8B07DDF261955E100FA1B8E /* iOS */,
-				A89DF36B261687200014B5E1 /* FlimsFlix */,
+				A89DF36B261687200014B5E1 /* Shared */,
 				A89DF36A261687200014B5E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,7 +70,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A89DF36B261687200014B5E1 /* FlimsFlix */ = {
+		A89DF36B261687200014B5E1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				A89DF36C261687200014B5E1 /* FlimsFlixApp.swift */,
@@ -76,11 +78,8 @@
 				A89DF370261687230014B5E1 /* Assets.xcassets */,
 				A89DF375261687230014B5E1 /* Info.plist */,
 				A89DF372261687230014B5E1 /* Preview Content */,
-				A89DF39B26168ADF0014B5E1 /* Movie.swift */,
-				A89DF39F26168B6E0014B5E1 /* StandardHomeMovie.swift */,
-				A89DF3A326168C560014B5E1 /* GlobalHelpers.swift */,
 			);
-			path = FlimsFlix;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		A89DF372261687230014B5E1 /* Preview Content */ = {
@@ -100,13 +99,41 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		A8A5E5DE261CD222004A0220 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				A8A5E24526196E6C004A0220 /* SmallVerticalButton.swift */,
+				A8B07DE0261955F400FA1B8E /* TopMoviePreview.swift */,
+				A89DF39F26168B6E0014B5E1 /* StandardHomeMovie.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		A8A5E5DF261CD24D004A0220 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A89DF3A326168C560014B5E1 /* GlobalHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A8A5E5E0261CD260004A0220 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A89DF39B26168ADF0014B5E1 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A8B07DDF261955E100FA1B8E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A8A5E5DF261CD24D004A0220 /* Helpers */,
+				A8A5E5DE261CD222004A0220 /* HelperViews */,
 				A89DF37C261687980014B5E1 /* Home */,
-				A8B07DE0261955F400FA1B8E /* TopMoviePreview.swift */,
-				A8A5E24526196E6C004A0220 /* SmallVerticalButton.swift */,
+				A8A5E5E0261CD260004A0220 /* Model */,
 				A8A5E248261A19A7004A0220 /* WhiteButton.swift */,
+				A8A5E5E1261CD2D8004A0220 /* MovieDetail.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -196,6 +223,7 @@
 				A89DF36D261687200014B5E1 /* FlimsFlixApp.swift in Sources */,
 				A8A5E24626196E6C004A0220 /* SmallVerticalButton.swift in Sources */,
 				A8A5E249261A19A7004A0220 /* WhiteButton.swift in Sources */,
+				A8A5E5E2261CD2D8004A0220 /* MovieDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,10 +352,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"FlimsFlix/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 5Z6M6KC5SH;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/FlimsFlix/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Shared/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -346,10 +374,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"FlimsFlix/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 5Z6M6KC5SH;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/FlimsFlix/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Shared/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
