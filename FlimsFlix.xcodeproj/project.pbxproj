@@ -16,11 +16,13 @@
 		A89DF3A026168B6E0014B5E1 /* StandardHomeMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89DF39F26168B6E0014B5E1 /* StandardHomeMovie.swift */; };
 		A89DF3A426168C560014B5E1 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89DF3A326168C560014B5E1 /* GlobalHelpers.swift */; };
 		A8A5E24626196E6C004A0220 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5E24526196E6C004A0220 /* SmallVerticalButton.swift */; };
-		A8A5E249261A19A7004A0220 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5E248261A19A7004A0220 /* WhiteButton.swift */; };
+		A8A5E249261A19A7004A0220 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5E248261A19A7004A0220 /* PlayButton.swift */; };
 		A8A5E5E2261CD2D8004A0220 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5E5E1261CD2D8004A0220 /* MovieDetail.swift */; };
 		A8B07DDA2617BC9300FA1B8E /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A8B07DD92617BC9300FA1B8E /* KingfisherSwiftUI */; };
 		A8B07DDD26191BAE00FA1B8E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B07DDC26191BAE00FA1B8E /* HomeViewModel.swift */; };
 		A8B07DE1261955F400FA1B8E /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B07DE0261955F400FA1B8E /* TopMoviePreview.swift */; };
+		A8CD7A8326223ECC002AC8B1 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD7A8226223ECB002AC8B1 /* Episode.swift */; };
+		A8CD7A87262257C1002AC8B1 /* CustomTabBarSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD7A86262257C1002AC8B1 /* CustomTabBarSwitcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +37,12 @@
 		A89DF39F26168B6E0014B5E1 /* StandardHomeMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeMovie.swift; sourceTree = "<group>"; };
 		A89DF3A326168C560014B5E1 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		A8A5E24526196E6C004A0220 /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
-		A8A5E248261A19A7004A0220 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
+		A8A5E248261A19A7004A0220 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		A8A5E5E1261CD2D8004A0220 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		A8B07DDC26191BAE00FA1B8E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A8B07DE0261955F400FA1B8E /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
+		A8CD7A8226223ECB002AC8B1 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		A8CD7A86262257C1002AC8B1 /* CustomTabBarSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarSwitcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +106,11 @@
 		A8A5E5DE261CD222004A0220 /* HelperViews */ = {
 			isa = PBXGroup;
 			children = (
+				A8A5E248261A19A7004A0220 /* PlayButton.swift */,
 				A8A5E24526196E6C004A0220 /* SmallVerticalButton.swift */,
 				A8B07DE0261955F400FA1B8E /* TopMoviePreview.swift */,
 				A89DF39F26168B6E0014B5E1 /* StandardHomeMovie.swift */,
+				A8CD7A86262257C1002AC8B1 /* CustomTabBarSwitcher.swift */,
 			);
 			path = HelperViews;
 			sourceTree = "<group>";
@@ -121,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				A89DF39B26168ADF0014B5E1 /* Movie.swift */,
+				A8CD7A8226223ECB002AC8B1 /* Episode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,7 +139,6 @@
 				A8A5E5DE261CD222004A0220 /* HelperViews */,
 				A89DF37C261687980014B5E1 /* Home */,
 				A8A5E5E0261CD260004A0220 /* Model */,
-				A8A5E248261A19A7004A0220 /* WhiteButton.swift */,
 				A8A5E5E1261CD2D8004A0220 /* MovieDetail.swift */,
 			);
 			path = iOS;
@@ -213,7 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8CD7A87262257C1002AC8B1 /* CustomTabBarSwitcher.swift in Sources */,
 				A89DF3A426168C560014B5E1 /* GlobalHelpers.swift in Sources */,
+				A8CD7A8326223ECC002AC8B1 /* Episode.swift in Sources */,
 				A89DF37E261687A90014B5E1 /* HomeView.swift in Sources */,
 				A8B07DDD26191BAE00FA1B8E /* HomeViewModel.swift in Sources */,
 				A89DF36F261687200014B5E1 /* ContentView.swift in Sources */,
@@ -222,7 +230,7 @@
 				A89DF39C26168ADF0014B5E1 /* Movie.swift in Sources */,
 				A89DF36D261687200014B5E1 /* FlimsFlixApp.swift in Sources */,
 				A8A5E24626196E6C004A0220 /* SmallVerticalButton.swift in Sources */,
-				A8A5E249261A19A7004A0220 /* WhiteButton.swift in Sources */,
+				A8A5E249261A19A7004A0220 /* PlayButton.swift in Sources */,
 				A8A5E5E2261CD2D8004A0220 /* MovieDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
