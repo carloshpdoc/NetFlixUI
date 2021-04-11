@@ -9,7 +9,10 @@ import SwiftUI
 
 struct CustomTabBarSwitcher: View {
     
+    @State private var currentTab: CustomTab = .episodes
+
     var tabs: [CustomTab]
+    var movie: Movie
     
     func widthForTab(_ tab: CustomTab) -> CGFloat {
         let string = tab.rawValue
@@ -18,25 +21,41 @@ struct CustomTabBarSwitcher: View {
 
     var body: some View {
         VStack {
+            // Custom tab picker
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
+                HStack(spacing: 20) {
                     ForEach(tabs, id: \.self) { tab in
                         VStack {
+                            // Red Bar
                             Rectangle()
                                 .frame(width: widthForTab(tab), height: 6)
+                                .foregroundColor(tab == currentTab ? Color.red : Color.clear)
 
+                            // Button
                             Button(action: {
-                                //
+                                currentTab = tab
                             }, label: {
                                 Text(tab.rawValue)
                                     .font(.system(size: 16, weight: .bold))
+                                    .foregroundColor(tab == currentTab ? Color.red : Color.gray)
                             })
                             .buttonStyle(PlainButtonStyle())
+                            .frame(width: widthForTab(tab), height: 30)
                         }
                     }
                 }
             }
-            Text("Selected View")
+            
+            
+            // Selected View
+            switch currentTab {
+            case .episodes:
+                Text("Selected EPISODES")
+            case .trailers:
+                TrailerList(trailers: movie.trailers)
+            case .more:
+                MoreLikeThis(movies: movie.moreLikeThisMovies)
+            }
         }
         .foregroundColor(Color.white)
     }
@@ -54,8 +73,9 @@ struct CustomTabBarSwitcher_Previews: PreviewProvider {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            CustomTabBarSwitcher(tabs: [.episodes, .trailers, .more])
+
+            
+            CustomTabBarSwitcher(tabs: [.episodes, .trailers, .more], movie: exampleMovie5)
         }
-        
     }
 }
