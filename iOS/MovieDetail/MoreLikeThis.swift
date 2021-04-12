@@ -15,7 +15,7 @@ struct MoreLikeThis: View {
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
-
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns) {
