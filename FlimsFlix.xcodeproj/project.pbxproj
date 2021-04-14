@@ -29,6 +29,7 @@
 		A8CD7A8326223ECC002AC8B1 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD7A8226223ECB002AC8B1 /* Episode.swift */; };
 		A8CD7A87262257C1002AC8B1 /* CustomTabBarSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD7A86262257C1002AC8B1 /* CustomTabBarSwitcher.swift */; };
 		A8CD7A8B26227B43002AC8B1 /* MoreLikeThis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD7A8A26227B43002AC8B1 /* MoreLikeThis.swift */; };
+		A8EEF8732626A83B00FEFE1F /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EEF8722626A83B00FEFE1F /* HomeStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		A8CD7A8226223ECB002AC8B1 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		A8CD7A86262257C1002AC8B1 /* CustomTabBarSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarSwitcher.swift; sourceTree = "<group>"; };
 		A8CD7A8A26227B43002AC8B1 /* MoreLikeThis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLikeThis.swift; sourceTree = "<group>"; };
+		A8EEF8722626A83B00FEFE1F /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				A89DF37D261687A90014B5E1 /* HomeView.swift */,
+				A8EEF8722626A83B00FEFE1F /* HomeStack.swift */,
 				A8B07DDC26191BAE00FA1B8E /* HomeViewModel.swift */,
 			);
 			path = Home;
@@ -266,6 +269,7 @@
 				A8B07DE1261955F400FA1B8E /* TopMoviePreview.swift in Sources */,
 				A89DF39C26168ADF0014B5E1 /* Movie.swift in Sources */,
 				A8CD7A8B26227B43002AC8B1 /* MoreLikeThis.swift in Sources */,
+				A8EEF8732626A83B00FEFE1F /* HomeStack.swift in Sources */,
 				A89DF36D261687200014B5E1 /* FlimsFlixApp.swift in Sources */,
 				A85064D42622934500FF49F8 /* TrailerList.swift in Sources */,
 				A8A5E24626196E6C004A0220 /* SmallVerticalButton.swift in Sources */,

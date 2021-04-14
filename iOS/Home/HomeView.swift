@@ -36,35 +36,95 @@ struct HomeView: View {
                         .padding(.top, -110)
                         .zIndex(-1)
                     
-                    ForEach(viewModel.allCategories, id: \.self) { category in
-                        VStack {
-                            HStack {
-                                Text(category)
-                                    .font(.title3)
-                                    .bold()
-                                Spacer()
-                            }
-                            
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                LazyHStack{
-                                    ForEach(viewModel.getMovies(forCat: category)) { movie in
-                                        StandardHomeMovie(movie: movie)
-                                            .frame(width: 100, height: 200)
-                                            .padding(.horizontal, 20)
-                                            .onTapGesture {
-                                                movieDetailToShow = movie
-                                            }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    HomeStack(viewModel: viewModel, topRowSelection: topRowSelection, movieDetailToShow: $movieDetailToShow)
                 }
             }
             if movieDetailToShow != nil {
                 MovieDetail(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
                     .animation(.easeIn)
                     .transition(.opacity)
+            }
+            
+            if showTopRowSelection {
+                Group {
+                    Color.black.opacity(0.9)
+                    
+                    VStack(spacing: 40) {
+                        
+                        Spacer()
+
+                        ForEach(HomeTopRow.allCases, id: \.self) { topRow in
+                            
+                            Button(action: {
+                                topRowSelection = topRow
+                                showTopRowSelection = false
+                            }, label: {
+                                if topRow == topRowSelection {
+                                    Text("\(topRow.rawValue)")
+                                        .bold()
+                                } else {
+                                    Text("\(topRow.rawValue)")
+                                        .foregroundColor(.gray  )
+                                }
+                                
+                            })
+                        }
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            showTopRowSelection = false
+                        }, label: {
+                            Image(systemName: "xmark.cirlce.fill")
+                                .font(.system(size: 40))
+                        })
+                        .padding(.bottom, 30)
+                    }
+                }
+                .edgesIgnoringSafeArea(.all)
+                .font(.title2)
+            }
+            
+            if showGenreSelection {
+                if showTopRowSelection {
+                    Group {
+                        Color.black.opacity(0.9)
+                        
+                        VStack(spacing: 40) {
+                            
+                            Spacer()
+
+                            ForEach(HomeTopRow.allCases, id: \.self) { topRow in
+                                
+                                Button(action: {
+                                    topRowSelection = topRow
+                                    showTopRowSelection = false
+                                }, label: {
+                                    if topRow == topRowSelection {
+                                        Text("\(topRow.rawValue)")
+                                            .bold()
+                                    } else {
+                                        Text("\(topRow.rawValue)")
+                                            .foregroundColor(.gray  )
+                                    }
+                                    
+                                })
+                            }
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                showTopRowSelection = false
+                            }, label: {
+                                Image(systemName: "xmark.cirlce.fill")
+                                    .font(.system(size: 40))
+                            })
+                            .padding(.bottom, 30)
+                        }
+                    }
+                    .edgesIgnoringSafeArea(.all)
+                    .font(.title2)
+                }
             }
         }
         .foregroundColor(.white)
