@@ -13,6 +13,7 @@ struct Movie: Identifiable {
     var thumbnailURL: URL
     
     var categories: [String]
+    var genre: HomeGenre = .AllGenres
     
     // MARK: - MovieDetail View
     var year: Int
@@ -74,8 +75,7 @@ struct CurrentEpisodeInfo: Hashable, Equatable {
     var episode: Int
 }
 
-enum  MovieType {
+enum MovieType {
     case movie
     case tvShow
-    case myList
 }

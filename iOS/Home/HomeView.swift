@@ -15,7 +15,7 @@ struct HomeView: View {
     @State private var movieDetailToShow: Movie? = nil
     
     @State private var topRowSelection: HomeTopRow = .home
-    @State private var homeGenre: HomeGenre = .allGenres
+    @State private var homeGenre: HomeGenre = .AllGenres
     
     @State private var showGenreSelection = false
     @State private var showTopRowSelection = false
@@ -36,7 +36,7 @@ struct HomeView: View {
                         .padding(.top, -110)
                         .zIndex(-1)
                     
-                    HomeStack(viewModel: viewModel, topRowSelection: topRowSelection, movieDetailToShow: $movieDetailToShow)
+                    HomeStack(viewModel: viewModel, topRowSelection: topRowSelection, selectedGenre: homeGenre, movieDetailToShow: $movieDetailToShow)
                 }
             }
             if movieDetailToShow != nil {
@@ -75,7 +75,7 @@ struct HomeView: View {
                         Button(action: {
                             showTopRowSelection = false
                         }, label: {
-                            Image(systemName: "xmark.cirlce.fill")
+                            Image(systemName: "xmark.circle.fill")
                                 .font(.system(size: 40))
                         })
                         .padding(.bottom, 30)
@@ -94,29 +94,32 @@ struct HomeView: View {
                             
                             Spacer()
 
-                            ForEach(HomeTopRow.allCases, id: \.self) { topRow in
-                                
-                                Button(action: {
-                                    topRowSelection = topRow
-                                    showTopRowSelection = false
-                                }, label: {
-                                    if topRow == topRowSelection {
-                                        Text("\(topRow.rawValue)")
-                                            .bold()
-                                    } else {
-                                        Text("\(topRow.rawValue)")
-                                            .foregroundColor(.gray  )
-                                    }
+                            ScrollView{
+                                ForEach(viewModel.allGenre, id: \.self) { genre in
                                     
-                                })
+                                    Button(action: {
+                                        homeGenre = genre
+                                        showGenreSelection = false
+                                    }, label: {
+                                        if genre == homeGenre {
+                                            Text("\(genre.rawValue)")
+                                                .bold()
+                                        } else {
+                                            Text("\(genre.rawValue)")
+                                                .foregroundColor(.gray)
+                                        }
+                                        
+                                    })
+                                    .padding(.bottom, 40)
+                                }
                             }
                             
                             Spacer()
                             
                             Button(action: {
-                                showTopRowSelection = false
+                                showGenreSelection = false
                             }, label: {
-                                Image(systemName: "xmark.cirlce.fill")
+                                Image(systemName: "xmark.circle.fill")
                                     .font(.system(size: 40))
                             })
                             .padding(.bottom, 30)
@@ -165,7 +168,8 @@ struct TopRowButtons: View {
                     topRowSelection = .tvShows
                 }, label: {
                     Text("TV Shows")
-                }).buttonStyle(PlainButtonStyle())
+                })
+                .buttonStyle(PlainButtonStyle())
                 
                 Spacer()
                 
@@ -186,6 +190,7 @@ struct TopRowButtons: View {
             }
             .padding(.leading, 10)
             .padding(.trailing, 30)
+
         case .myList, .tvShows, .movies:
             HStack {
                 Button(action: {
@@ -242,7 +247,7 @@ enum HomeTopRow: String, CaseIterable {
 }
 
 enum HomeGenre: String {
-    case allGenres
+    case AllGenres
     case Action
     case Comedy
     case Horror
