@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A84FAD232630C80300239CCF /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84FAD222630C80300239CCF /* SearchBar.swift */; };
+		A84FAD282630C93600239CCF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84FAD272630C93600239CCF /* Colors.swift */; };
+		A84FAD2B2630D9C000239CCF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84FAD2A2630D9C000239CCF /* ActivityIndicator.swift */; };
 		A85064C926228F1A00FF49F8 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85064C826228F1A00FF49F8 /* Trailer.swift */; };
 		A85064CC26228F9200FF49F8 /* SwiftUIVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85064CB26228F9200FF49F8 /* SwiftUIVideoView.swift */; };
 		A85064D0262290F100FF49F8 /* VideoPreviewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85064CF262290F100FF49F8 /* VideoPreviewImage.swift */; };
@@ -33,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A84FAD222630C80300239CCF /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		A84FAD272630C93600239CCF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A84FAD2A2630D9C000239CCF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A85064C826228F1A00FF49F8 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		A85064CB26228F9200FF49F8 /* SwiftUIVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIVideoView.swift; sourceTree = "<group>"; };
 		A85064CF262290F100FF49F8 /* VideoPreviewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewImage.swift; sourceTree = "<group>"; };
@@ -71,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A84FAD252630C81000239CCF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A84FAD222630C80300239CCF /* SearchBar.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		A85064CE262290BE00FF49F8 /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				A89DF3A326168C560014B5E1 /* GlobalHelpers.swift */,
+				A84FAD272630C93600239CCF /* Colors.swift */,
+				A84FAD2A2630D9C000239CCF /* ActivityIndicator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -159,6 +175,7 @@
 		A8B07DDF261955E100FA1B8E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A84FAD252630C81000239CCF /* Search */,
 				A85064CE262290BE00FF49F8 /* VideoPlayer */,
 				A8CD7A8926227A67002AC8B1 /* MovieDetail */,
 				A8A5E5DF261CD24D004A0220 /* Helpers */,
@@ -257,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A85064D826236C3800FF49F8 /* EpisodesView.swift in Sources */,
+				A84FAD282630C93600239CCF /* Colors.swift in Sources */,
 				A8CD7A87262257C1002AC8B1 /* CustomTabBarSwitcher.swift in Sources */,
 				A85064C926228F1A00FF49F8 /* Trailer.swift in Sources */,
 				A89DF3A426168C560014B5E1 /* GlobalHelpers.swift in Sources */,
@@ -267,9 +285,11 @@
 				A89DF36F261687200014B5E1 /* ContentView.swift in Sources */,
 				A89DF3A026168B6E0014B5E1 /* StandardHomeMovie.swift in Sources */,
 				A8B07DE1261955F400FA1B8E /* TopMoviePreview.swift in Sources */,
+				A84FAD2B2630D9C000239CCF /* ActivityIndicator.swift in Sources */,
 				A89DF39C26168ADF0014B5E1 /* Movie.swift in Sources */,
 				A8CD7A8B26227B43002AC8B1 /* MoreLikeThis.swift in Sources */,
 				A8EEF8732626A83B00FEFE1F /* HomeStack.swift in Sources */,
+				A84FAD232630C80300239CCF /* SearchBar.swift in Sources */,
 				A89DF36D261687200014B5E1 /* FlimsFlixApp.swift in Sources */,
 				A85064D42622934500FF49F8 /* TrailerList.swift in Sources */,
 				A8A5E24626196E6C004A0220 /* SmallVerticalButton.swift in Sources */,
