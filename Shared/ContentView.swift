@@ -23,7 +23,7 @@ struct ContentView: View {
                     Text("1")
                 }.tag(0)
             
-            SearchBar(text: .constant(""), isLoading: .constant(false))
+            SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("1")
