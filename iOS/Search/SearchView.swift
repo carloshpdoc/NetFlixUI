@@ -40,7 +40,6 @@ struct SearchView: View {
                         Text("Sua busca não retornou resultados!")
                             .bold()
                             .padding(.top, 150)
-
                     } else if viewModel.viewState == .ready && !viewModel.isShowingPopularMovies {
                         VStack {
                             HStack {

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A82A5F0D263F8602001CABD3 /* ComingSoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A5F0C263F8602001CABD3 /* ComingSoon.swift */; };
+		A82A5F10263F865C001CABD3 /* NotificationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A5F0F263F865C001CABD3 /* NotificationBar.swift */; };
+		A82A5F12263F89AB001CABD3 /* ComingSoonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A5F11263F89AB001CABD3 /* ComingSoonRow.swift */; };
+		A82A5F14263F903D001CABD3 /* ComingSoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A5F13263F903D001CABD3 /* ComingSoonViewModel.swift */; };
+		A82A5F16263F9322001CABD3 /* TrackableSrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A5F15263F9322001CABD3 /* TrackableSrollView.swift */; };
 		A84FAD232630C80300239CCF /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84FAD222630C80300239CCF /* SearchBar.swift */; };
 		A84FAD282630C93600239CCF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84FAD272630C93600239CCF /* Colors.swift */; };
 		A84FAD2B2630D9C000239CCF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84FAD2A2630D9C000239CCF /* ActivityIndicator.swift */; };
@@ -41,6 +46,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A82A5F0C263F8602001CABD3 /* ComingSoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoon.swift; sourceTree = "<group>"; };
+		A82A5F0F263F865C001CABD3 /* NotificationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBar.swift; sourceTree = "<group>"; };
+		A82A5F11263F89AB001CABD3 /* ComingSoonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonRow.swift; sourceTree = "<group>"; };
+		A82A5F13263F903D001CABD3 /* ComingSoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewModel.swift; sourceTree = "<group>"; };
+		A82A5F15263F9322001CABD3 /* TrackableSrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableSrollView.swift; sourceTree = "<group>"; };
 		A84FAD222630C80300239CCF /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		A84FAD272630C93600239CCF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A84FAD2A2630D9C000239CCF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -87,6 +97,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A82A5F0E263F8640001CABD3 /* ComingSoon */ = {
+			isa = PBXGroup;
+			children = (
+				A82A5F0C263F8602001CABD3 /* ComingSoon.swift */,
+				A82A5F0F263F865C001CABD3 /* NotificationBar.swift */,
+				A82A5F11263F89AB001CABD3 /* ComingSoonRow.swift */,
+				A82A5F13263F903D001CABD3 /* ComingSoonViewModel.swift */,
+				A82A5F15263F9322001CABD3 /* TrackableSrollView.swift */,
+			);
+			path = ComingSoon;
+			sourceTree = "<group>";
+		};
 		A84FAD252630C81000239CCF /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +212,7 @@
 		A8B07DDF261955E100FA1B8E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A82A5F0E263F8640001CABD3 /* ComingSoon */,
 				A8A5E5DF261CD24D004A0220 /* Helpers */,
 				A8A5E5DE261CD222004A0220 /* HelperViews */,
 				A89DF37C261687980014B5E1 /* Home */,
@@ -292,11 +315,14 @@
 				A85064D826236C3800FF49F8 /* EpisodesView.swift in Sources */,
 				A8C9B408263DFA25005D22E0 /* GenerateMovies.swift in Sources */,
 				A84FAD282630C93600239CCF /* Colors.swift in Sources */,
+				A82A5F10263F865C001CABD3 /* NotificationBar.swift in Sources */,
 				A8CD7A87262257C1002AC8B1 /* CustomTabBarSwitcher.swift in Sources */,
 				A85064C926228F1A00FF49F8 /* Trailer.swift in Sources */,
 				A8C9B404263DE375005D22E0 /* SearchView.swift in Sources */,
 				A89DF3A426168C560014B5E1 /* GlobalHelpers.swift in Sources */,
+				A82A5F0D263F8602001CABD3 /* ComingSoon.swift in Sources */,
 				A8C9B40C263EF28D005D22E0 /* SearchResultsGrid.swift in Sources */,
+				A82A5F16263F9322001CABD3 /* TrackableSrollView.swift in Sources */,
 				A8CD7A8326223ECC002AC8B1 /* Episode.swift in Sources */,
 				A89DF37E261687A90014B5E1 /* HomeView.swift in Sources */,
 				A85064D0262290F100FF49F8 /* VideoPreviewImage.swift in Sources */,
@@ -310,9 +336,11 @@
 				A8EEF8732626A83B00FEFE1F /* HomeStack.swift in Sources */,
 				A84FAD232630C80300239CCF /* SearchBar.swift in Sources */,
 				A89DF36D261687200014B5E1 /* FlimsFlixApp.swift in Sources */,
+				A82A5F12263F89AB001CABD3 /* ComingSoonRow.swift in Sources */,
 				A85064D42622934500FF49F8 /* TrailerList.swift in Sources */,
 				A8A5E24626196E6C004A0220 /* SmallVerticalButton.swift in Sources */,
 				A8C9B406263DE3B4005D22E0 /* SearchViewModel.swift in Sources */,
+				A82A5F14263F903D001CABD3 /* ComingSoonViewModel.swift in Sources */,
 				A8A5E249261A19A7004A0220 /* PlayButton.swift in Sources */,
 				A85064CC26228F9200FF49F8 /* SwiftUIVideoView.swift in Sources */,
 				A8A5E5E2261CD2D8004A0220 /* MovieDetail.swift in Sources */,
