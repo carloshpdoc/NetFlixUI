@@ -35,10 +35,10 @@ struct ContentView: View {
                     Text("Coming Soon")
                 }.tag(2)
             
-            Text("FIRST")
+            DownloadsView()
                 .tabItem {
                     Image(systemName: "arrow.down.to.line.alt")
-                    Text("1")
+                    Text("Downloads")
                 }.tag(3)
             
             Text("FIRST")
